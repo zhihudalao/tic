@@ -1,0 +1,19 @@
+<launch>
+  <!--include file="$(find ist_driver)/launch/driver_imu.launch"/-->
+  <!--include file="$(find sick_tim)/launch/sick_tim571_2050101.launch" /--> 
+  <!--include file="$(find ist_description)/launch/ist_description.launch"/-->
+
+  <node name="ist_slam_node" pkg="ist_slam_ros"
+      type="ist_slam_node" args="
+          -configuration_directory $(find ist_slam_ros)/configuration_files
+          -configuration_basename ist_slam_create_map.lua"
+      output="screen">
+    <remap from="scan" to="/scan_filtered" />
+  </node>
+  
+  <node name="ist_slam_occupancy_grid_node" pkg="ist_slam_ros"
+      type="ist_slam_occupancy_grid_node" args="-resolution 0.05" />
+
+  <!--node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find ist_slam_ros)/configuration_files/ist_slam_create_map.rviz" /-->
+</launch>

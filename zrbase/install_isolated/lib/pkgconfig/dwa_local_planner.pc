@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: dwa_local_planner
+Description: Description of dwa_local_planner
+Version: 1.14.2
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -ldwa_local_planner
+Requires: dynamic_reconfigure nav_msgs pluginlib roscpp

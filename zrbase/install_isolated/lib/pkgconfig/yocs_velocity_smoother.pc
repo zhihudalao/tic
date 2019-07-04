@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: yocs_velocity_smoother
+Description: Description of yocs_velocity_smoother
+Version: 0.12.1
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lyocs_velocity_smoother_nodelet
+Requires: roscpp pluginlib nodelet ecl_threads dynamic_reconfigure geometry_msgs nav_msgs

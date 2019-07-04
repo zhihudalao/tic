@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+<robot name="base" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Define a number of dimensions using properties -->
+  <xacro:property name="base_length" value="0.165" />
+  <xacro:property name="base_radius" value="0.20" />
+  <xacro:property name="wheel_length" value="0.02" />
+  <xacro:property name="wheel_radius" value="0.085" />
+  <xacro:property name="wheel_offset_x" value="0" />
+  <!--xacro:property name="wheel_offset_y" value="0.2588" /-->
+  <xacro:property name="wheel_offset_y" value="0.266" />
+  <xacro:property name="wheel_offset_z" value="0" />
+
+  <xacro:property name="frontdistance" value="0.38" />
+  <!--xacro:property name="frontdistance" value="0.38" /-->
+
+
+  <!--xacro:property name="backtance" value="-0.48" /-->
+  <xacro:property name="backtance" value="-0.48" />
+  <xacro:property name="PI" value="3.1415926" />
+     
+  <!-- define a wheel -->
+      <xacro:macro name="wheel" params="suffix parent reflect front color">
+    <joint name="${parent}_${suffix}_${front}_wheel_joint" type="continuous">
+      <axis xyz="0 0 1" />
+      <limit effort="100" velocity="100"/>
+      <safety_controller k_velocity="10" />
+      <origin xyz="${backtance*front} ${reflect*wheel_offset_y} ${wheel_offset_z}" rpy="${reflect*PI/2} 0 0" />
+      <parent link="${parent}_link"/>
+      <child link="${parent}_${suffix}_${front}_wheel_link"/>
+    </joint>
+    <link name="${parent}_${suffix}_${front}_wheel_link">
+<!--
+ <visual>
+<origin xyz=" 0 0 0 " rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://common/urdf/meshes/wheel.STL" />
+      </geometry>
+      <material name="${color}" />
+</visual>
+-->
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+        </geometry>
+        <material name="${color}" />
+      </visual>
+    </link>
+  </xacro:macro>
+
+  <!-- The base xacro macro -->
+  <xacro:macro name="base" params="name color">
+    <link name="${name}_link">
+
+<!--
+ <visual>
+<origin xyz=" 0 0 0 " rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://common/urdf/meshes/dash_base_all.STL" />
+      </geometry>
+      <material name="">        
+        <color
+          rgba="255 215 0 0.5"/>
+      </material>
+</visual>
+-->
+        <visual>
+            <origin xyz="0.183 0 0" rpy="0 0 0"/>
+            <geometry>
+		<!--
+                <cylinder length="${base_length}" radius="${base_radius}"/>
+		-->
+                <box size="0.84 0.61 0.01" />
+            </geometry>
+            <material name="iRobot/LightGrey"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder length="${base_length}" radius="${base_radius}"/>
+            </geometry>
+        </collision>
+    </link>
+  </xacro:macro>
+  
+  <link name="base_footprint">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.05 0.05 0.05" />
+        </geometry>
+        <material name="TransparentGreen" />
+      </visual>
+  </link>
+  
+  <joint name="base_joint" type="fixed">
+
+    <box size="0.84 0.61 0.01" />
+    <origin xyz="0 0 0.04" rpy="0 0 0" />       
+    <origin xyz="0 0 0" rpy="0 0 0" />      
+    <parent link="base_footprint"/>
+    <child link="base_link" />
+  </joint>
+
+   <!-- Add the drive wheels -->
+   <wheel parent="base" suffix="l" reflect="1" front="0" color="Orange"/>
+   <wheel parent="base" suffix="r" reflect="-1" front="0" color="Orange"/>
+   <wheel parent="base" suffix="l" reflect="1" front="-1" color="Orange"/>
+   <wheel parent="base" suffix="r" reflect="-1" front="-1" color="Orange"/>
+</robot>

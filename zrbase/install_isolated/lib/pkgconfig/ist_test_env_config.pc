@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: ist_test_env_config
+Description: Description of ist_test_env_config
+Version: 0.6.6
+Cflags: 
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib 
+Requires: 

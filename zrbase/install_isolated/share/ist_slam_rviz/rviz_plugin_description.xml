@@ -1,0 +1,11 @@
+
+
+<library path="lib/libist_slam_rviz">
+  <class name="Submaps"
+         type="ist_slam_rviz::SubmapsDisplay"
+         base_class_type="rviz::Display">
+    <description>
+    ist_slam
+  </description>
+  </class>
+</library>

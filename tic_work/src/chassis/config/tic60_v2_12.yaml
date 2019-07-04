@@ -1,0 +1,93 @@
+#=========== 底盘型号 ====================
+chassis: tic60_V11
+#chassis: tic60_V20
+
+# =========== 后轮驱动相关参数 ===============
+#轮子直径 单位：m
+wheel_diameter: 0.175
+#轮子周长 单位：m
+wheel_track: 0.56
+#编码器分辨率
+encoder_resolution: 4000
+#编码器相关减速比
+upGearReduction: 50
+#速度下发相关减速比
+downGearReduction: 50
+#加速度
+accel_limit: 1.0
+#轮子距离odom中心的距离 单位：m
+centerDistance: 0.56
+
+# =========== 超声相关参数 =================
+ultrasoundFieldView: 30
+ultrasoundMinRange: 0.1
+ultrasoundMaxRange: 5
+
+# =========== 其他参数 ====================
+# odom tf name
+base_frame: base_footprint
+#
+logFile: /root/log/chassis.log
+#cmdval topic 超时检测时间 单位：s
+timeout: 0.4
+#状态相关topic间隔多长时间发送一次
+statusSendTime: 0.3
+#调试模式
+debug: false
+
+port: /dev/ttyStm32
+baud: 115200
+rate: 20
+sensorstate_rate: 50
+
+useImu: False
+useSonar: False
+use_base_controller: True
+base_controller_rate: 10
+
+sonar_height: 0.15
+
+sonar0_offset_yaw: 0.0
+sonar0_offset_x: 0.23
+sonar0_offset_y: 0.07
+
+sonar1_offset_yaw: 0.0
+sonar1_offset_x: 0.23
+sonar1_offset_y: -0.07
+
+sonar2_offset_yaw: 0.785
+sonar2_offset_x: 0.23
+sonar2_offset_y: 0.15
+
+sonar3_offset_yaw: -0.785
+sonar3_offset_x: 0.23
+sonar3_offset_y: -0.15
+
+sonar4_offset_yaw: 3.14
+sonar4_offset_x: -0.07
+sonar4_offset_y: 0.0
+
+# === Robot drivetrain parameters
+motors_reversed: False
+
+debugSonarTest: True
+
+#配置参数可用
+motorLevelParamEnable: True
+odomTfSendFlag: True
+
+#刷盘电机旋转等级
+brushLevelLow: 10
+brushLevelMedium: 20
+brushLevelHigh: 30
+
+#喷水电机等级
+waterSprayLow: 10
+waterSprayMedium: 20
+waterSprayHigh: 30
+
+# === PID parameters
+Kp: 50
+Kd: 20
+Ki: 0
+Ko: 50

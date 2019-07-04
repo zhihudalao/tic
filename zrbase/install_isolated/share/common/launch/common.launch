@@ -1,0 +1,6 @@
+<launch>
+    <node name="reBoot" pkg="common" type="ReBoot.py"></node>
+    <node name="mapListPub" pkg="common" type="MapListPub.py"></node>
+    <node name="reloadWebSocket" pkg="common" type="ReloadWebSocket.py"></node>
+    <node name="rmMap" pkg="common" type="RmMap.py"></node>
+</launch>

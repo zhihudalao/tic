@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: yocs_navi_toolkit
+Description: Description of yocs_navi_toolkit
+Version: 0.12.1
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lyocs_navi_toolkit
+Requires: base_local_planner costmap_2d nav_msgs ecl_build ecl_linear_algebra roscpp tf

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<robot name="robot_tf">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="laser">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="wheel_1eft">
+    <visual>
+      <geometry>
+      <cylinder length="0.05" radius="0.085"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="wheel_right">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.085"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="Ultrasound1">
+    <visual>
+      <geometry>
+        <box size="0.029 0.05 0.025"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="Ultrasound2">
+    <visual>
+      <geometry>
+        <box size="0.029 0.05 0.025"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="Ultrasound3">
+    <visual>
+      <geometry>
+        <box size="0.029 0.05 0.025"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="Ultrasound4">
+    <visual>
+      <geometry>
+        <box size="0.029 0.05 0.025"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="joint_Ultrasound1" type="fixed">  
+    <parent link="base_link"/>  
+    <child link="Ultrasound1"/>
+    <origin xyz="0.446 -0.318 0.185" rpy="-1.57 0 0"/>
+  </joint>
+
+  <joint name="joint_Ultrasound2" type="fixed">  
+    <parent link="base_link"/>  
+    <child link="Ultrasound2"/>
+    <origin xyz="0.547 -0.101 0.185" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="joint_Ultrasound3" type="fixed">  
+    <parent link="base_link"/>  
+    <child link="Ultrasound3"/>
+    <origin xyz="0.547 0.101 0.185" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="joint_Ultrasound4" type="fixed">  
+    <parent link="base_link"/>  
+    <child link="Ultrasound4"/>
+    <origin xyz="0.446 0.318 0.185" rpy="1.57 0 0"/>
+  </joint>
+
+  <joint name="joint_left" type="fixed">  
+    <parent link="base_link"/>  
+    <child link="wheel_1eft"/>
+    <origin xyz="0 0.2662 0" rpy="1.57 0 0"/>
+  </joint>
+
+  <joint name="joint_right" type="fixed">  
+    <parent link="base_link"/>  
+    <child link="wheel_right"/>
+    <origin xyz="0 -0.2662 0" rpy="1.57 0 0"/>
+  </joint>
+
+  <joint name="joint_laser" type="fixed">  
+    <parent link="base_link"/>  
+    <child link="laser"/>
+    <origin xyz="0.527 0 0.1" rpy="0 0 0"/>
+  </joint>
+
+</robot>

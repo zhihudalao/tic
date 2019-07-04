@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: kobuki_driver
+Description: Description of kobuki_driver
+Version: 0.6.5
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lkobuki
+Requires: roscpp ecl_command_line ecl_converters ecl_devices ecl_geometry ecl_mobile_robot ecl_sigslots ecl_time

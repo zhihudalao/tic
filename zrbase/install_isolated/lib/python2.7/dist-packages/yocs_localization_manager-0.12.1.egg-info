@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: yocs_localization_manager
+Version: 0.12.1
+Summary: Localization Manager helps to localize robot's position with annotated information
+Home-page: http://wiki.ros.org/yocs_localization_manager
+Author: Jihoon Lee
+Author-email: jihoonl@yujinrobot.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: rospy

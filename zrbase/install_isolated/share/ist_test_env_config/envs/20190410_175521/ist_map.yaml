@@ -1,0 +1,6 @@
+image: ist_map_meitu_1.png
+resolution: 0.050000
+origin: [-11.738962, -10.009917, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

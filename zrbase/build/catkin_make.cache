@@ -1,0 +1,2 @@
+navigation_layers/range_sensor_layer
+-DCATKIN_DEVEL_PREFIX=/root/zrbase/devel -DCMAKE_INSTALL_PREFIX=/root/zrbase/install -G Unix Makefiles

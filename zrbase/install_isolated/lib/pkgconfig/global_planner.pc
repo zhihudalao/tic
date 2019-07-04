@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: global_planner
+Description: Description of global_planner
+Version: 1.14.2
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lglobal_planner
+Requires: costmap_2d dynamic_reconfigure geometry_msgs nav_core navfn nav_msgs pluginlib roscpp tf

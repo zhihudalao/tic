@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: kobuki_testsuite
+Version: 0.6.8
+Summary: Kobuki test suite: this package provides tools to thoroughly test Kobuki's hardware.
+Home-page: http://ros.org/wiki/kobuki_testsuite
+Author: Jorge Santos Simon
+Author-email: jorge@yujinrobot.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

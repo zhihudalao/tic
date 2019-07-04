@@ -1,0 +1,2 @@
+set(ist_slam_ros_msgs_MESSAGE_FILES "msg/BagfileProgress.msg;msg/HistogramBucket.msg;msg/LandmarkEntry.msg;msg/LandmarkList.msg;msg/MetricFamily.msg;msg/MetricLabel.msg;msg/Metric.msg;msg/SensorTopics.msg;msg/StatusCode.msg;msg/StatusResponse.msg;msg/SubmapEntry.msg;msg/SubmapList.msg;msg/SubmapTexture.msg;msg/TrajectoryOptions.msg;msg/TrajectoryStates.msg")
+set(ist_slam_ros_msgs_SERVICE_FILES "srv/FinishTrajectory.srv;srv/GetTrajectoryStates.srv;srv/ReadMetrics.srv;srv/StartTrajectory.srv;srv/SubmapQuery.srv;srv/WriteState.srv")

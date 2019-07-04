@@ -1,0 +1,4 @@
+<launch>
+    <node name="pubSpeed" pkg="speed_param" type="SpeedPub.py"></node>
+    <node name="subSpeed" pkg="speed_param" type="SpeedSub.py"></node>
+</launch>

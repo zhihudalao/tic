@@ -1,0 +1,15 @@
+
+
+<launch>
+  <node name="ist_slam_node" pkg="ist_slam_ros"
+      type="ist_slam_node" args="
+          -configuration_directory $(find ist_slam_ros)/configuration_files
+          -configuration_basename taurob_tracker.lua"
+      output="screen">
+    <remap from="scan" to="/spin_laser/scan" />
+    <remap from="imu" to="/imu/data" />
+  </node>
+
+  <node name="ist_slam_occupancy_grid_node" pkg="ist_slam_ros"
+      type="ist_slam_occupancy_grid_node" args="-resolution 0.05" />
+</launch>

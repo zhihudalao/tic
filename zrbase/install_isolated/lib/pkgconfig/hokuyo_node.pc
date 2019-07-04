@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: hokuyo_node
+Description: Description of hokuyo_node
+Version: 1.7.8
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -llibhokuyo
+Requires: rosconsole

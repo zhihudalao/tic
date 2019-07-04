@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: voxel_grid
+Description: Description of voxel_grid
+Version: 1.14.2
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lvoxel_grid
+Requires: roscpp

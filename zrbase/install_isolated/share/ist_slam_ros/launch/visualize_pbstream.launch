@@ -1,0 +1,15 @@
+
+
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find ist_slam_ros)/configuration_files/demo_2d.rviz" />
+  <node name="ist_slam_node" pkg="ist_slam_ros"
+      type="ist_slam_node" args="
+          -configuration_directory $(find ist_slam_ros)/configuration_files
+          -configuration_basename visualize_pbstream.lua
+          -load_state_filename $(arg pbstream_filename)
+          -load_frozen_state=false
+          -start_trajectory_with_default_topics=false"
+      output="screen">
+  </node>
+</launch>

@@ -1,0 +1,17 @@
+<launch>
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+  <include file="$(find rplidar_ros)/launch/rplidar_a3.launch" />
+  <include file="$(find ist_description)/launch/ist_description.launch"/>
+  <include file="$(find ist_nav)/launch/include/odom/gmapping_base.launch"/>
+  <include file="$(find ist_nav)/launch/include/odom/teb_move_base.launch"/>
+  <!--
+    <include file="$(find world_canvas_server)/launch/world_canvas_server.launch"/>
+  -->
+  <!--
+  <include file="$(find common)/launch/common.launch"/>
+  <include file="$(find marker)/launch/marker.launch"/>
+  <include file="$(find speed_param)/launch/speed_param.launch"/>
+  -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+  <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher" />
+</launch>

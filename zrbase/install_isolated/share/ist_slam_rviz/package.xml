@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+
+<package format="2">
+  <name>ist_slam_rviz</name>
+  <version>1.0.0</version>
+  <description>
+    ist_slam
+  </description>
+    <maintainer email="ist_slam-owners@googlegroups.com">
+  </maintainer>
+  <license>Apache 2.0</license>
+
+  <url></url>
+
+    <author email="google-ist_slam@googlegroups.com">
+  </author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>git</build_depend>
+
+  <depend version_gte="1.0.0">ist_slam</depend>
+  <depend version_gte="1.0.0">ist_slam_ros</depend>
+  <depend version_gte="1.0.0">ist_slam_ros_msgs</depend>
+  <depend>eigen_conversions</depend>
+  <depend>libqt5-core</depend>
+  <depend>libqt5-gui</depend>
+  <depend>libqt5-widgets</depend>
+  <depend>message_runtime</depend>
+  <depend>qtbase5-dev</depend>
+  <depend>roscpp</depend>
+  <depend>roslib</depend>
+  <depend>rviz</depend>
+
+  <export>
+      <rviz plugin="${prefix}/rviz_plugin_description.xml" />
+  </export>
+</package>

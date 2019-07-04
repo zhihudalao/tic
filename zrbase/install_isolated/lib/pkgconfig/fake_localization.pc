@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: fake_localization
+Description: Description of fake_localization
+Version: 1.14.2
+Cflags: 
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib 
+Requires: geometry_msgs nav_msgs roscpp rospy

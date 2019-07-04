@@ -1,0 +1,6 @@
+
+ist_slam_ros_msgs/TrajectoryOptions options
+ist_slam_ros_msgs/SensorTopics topics
+---
+ist_slam_ros_msgs/StatusResponse status
+int32 trajectory_id

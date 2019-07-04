@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: ist_building_msgs
+Description: Description of ist_building_msgs
+Version: 0.2.0
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib 
+Requires: actionlib_msgs geometry_msgs message_runtime sensor_msgs std_msgs

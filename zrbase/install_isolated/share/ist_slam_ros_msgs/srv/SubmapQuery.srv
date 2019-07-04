@@ -1,0 +1,7 @@
+
+int32 trajectory_id
+int32 submap_index
+---
+ist_slam_ros_msgs/StatusResponse status
+int32 submap_version
+ist_slam_ros_msgs/SubmapTexture[] textures

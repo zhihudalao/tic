@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: battery
+Description: Description of battery
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib 
+Requires: 

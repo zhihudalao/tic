@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: rs_imu
+Description: Description of rs_imu
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib 
+Requires: 

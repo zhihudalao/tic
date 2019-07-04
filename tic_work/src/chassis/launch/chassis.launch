@@ -1,0 +1,27 @@
+<launch>
+    <param name="/use_sim_time" value="false" />
+
+    <node name="chassis" pkg="chassis" type="chassis" output="screen" respawn="true">
+        <rosparam file="$(find chassis)/config/tic60.yaml" command="load" />
+    </node>
+
+    <node name="movemotor_presisecontrol" pkg="chassis" type="movemotor_presisecontrol" output="screen" respawn="true"/>
+
+    <arg name="node_name"             value="velocity_smoother"/>
+    <arg name="nodelet_manager_name"  value="nodelet_manager"/>
+    <arg name="config_file"           value="$(find chassis)/config/yocs_velocity_smoother.yaml"/>
+    <arg name="raw_cmd_vel_topic"     value="cmd_vel"/>
+    <arg name="smooth_cmd_vel_topic"  value="smoother_cmd_vel"/>
+    <arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>
+    <arg name="odom_topic"            value="odom"/>
+
+    <!-- 运行robot_state_publisher节点，发布tf -->
+    <!-- node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" /-->
+    <!-- 加载urdr文件 -->
+    <!--param name="robot_description" textfile="$(find chassis)/config/tic60_v1.urdf" /-->
+    <!-- param name="robot_description" textfile="$(find chassis)/config/tic60_v2.urdf" /-->
+
+    <!-- node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find chassis)/chassis.rviz" /-->
+    <!-- node pkg="tf" type="static_transform_publisher" name="base_link" args="0 0 0 0 0 0 /base_footprint /base_link 50" /-->
+
+</launch>

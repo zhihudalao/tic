@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: ist_slam_rviz
+Description: Description of ist_slam_rviz
+Version: 1.0.0
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib 
+Requires: message_runtime ist_slam_ros ist_slam_ros_msgs eigen_conversions message_runtime roscpp roslib rviz

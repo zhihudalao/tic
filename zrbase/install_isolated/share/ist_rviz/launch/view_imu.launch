@@ -1,0 +1,4 @@
+<launch>
+  <node name="view_imu_rviz" pkg="rviz" type="rviz" args="-d $(find ist_rviz)/rviz/pathgo_imu.rviz"/>
+</launch>
+

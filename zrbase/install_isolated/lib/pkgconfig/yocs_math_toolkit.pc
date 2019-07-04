@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: yocs_math_toolkit
+Description: Description of yocs_math_toolkit
+Version: 0.12.1
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lyocs_math_toolkit
+Requires: ecl_build ecl_config ecl_exceptions ecl_formatters ecl_linear_algebra geometry_msgs roscpp tf

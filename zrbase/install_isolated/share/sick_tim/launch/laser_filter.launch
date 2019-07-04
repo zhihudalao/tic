@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="laser_filters" type="scan_to_scan_filter_chain"
+      name="laser_filter">
+    <rosparam command="load" file="/root/zrbase/install_isolated/share/sick_tim/launch/laser_filters_param.yaml" />
+  </node>
+</launch>

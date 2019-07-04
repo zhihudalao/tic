@@ -1,0 +1,11 @@
+uint8 header1
+uint8 header2
+uint8 hostid
+uint8 subhostid
+uint32 imudata
+uint32 encoderdata 
+uint32 wavedata
+uint32 glosscheckdata
+uint32 collisiondata
+uint8 checknumhigh
+uint8 checknumlow

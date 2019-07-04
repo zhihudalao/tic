@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!--  -->
+	<node ns="room_exploration" pkg="ist_room_exploration" type="room_exploration_server" name="room_exploration_server" output="screen" respawn="true" respawn_delay="2">
+		<param name="license_file" value="$(env HOME)/.ros/room_coverage.lic" />
+		<rosparam command="load" file="$(find ist_room_exploration)/ros/launch/room_exploration_action_server_params.yaml"/>
+	</node>
+
+	<!-- run cob_map_accessibility_analysis_server and coverage_check_server-->
+	<include file="$(find ist_room_exploration)/ros/launch/coverage_check_server.launch"/>  <!-- todo: activate -->
+</launch>

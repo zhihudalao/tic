@@ -1,0 +1,15 @@
+
+
+<launch>
+  <arg name="urdf_filename" default="$(find ist_slam_ros)/urdf/backpack_2d.urdf"/>
+
+  <node name="ist_slam_assets_writer" pkg="ist_slam_ros" required="true"
+      type="ist_slam_assets_writer" args="
+          -configuration_directory $(find ist_slam_ros)/configuration_files
+          -configuration_basename assets_writer_ros_map.lua
+          -urdf_filename $(arg urdf_filename)
+          -bag_filenames $(arg bag_filenames)
+          -pose_graph_filename $(arg pose_graph_filename)"
+      output="screen">
+  </node>
+</launch>

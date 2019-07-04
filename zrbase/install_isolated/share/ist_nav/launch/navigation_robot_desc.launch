@@ -1,0 +1,29 @@
+<launch>
+  <arg name="map_file" default="/home/ubuntu/map/20190611_175543/ist_map.yaml"/>         <!--map arddr /-->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  <arg name="initial_pose_x" default="0.0"/> 
+  <arg name="initial_pose_y" default="0.0"/> 
+  <arg name="initial_pose_a" default="0.0"/>
+  <include file="$(find ist_nav)/launch/include/imu/amcl.launch.xml">
+    <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+    <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+    <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+  </include>
+  <!-- <include file="$(find ist_nav)/launch/include/imu/teb_move_base.launch"/> -->
+  <include file="$(find ist_nav)/launch/include/imu/dwa_move_base.launch"/>
+<!--  
+  <include file="$(find common)/launch/common.launch"/>
+ 
+  <include file="$(find marker)/launch/marker.launch"/>
+  <include file="$(find speed_param)/launch/speed_param.launch"/>
+
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+-->
+  <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher" />
+	
+  <!--node pkg="laser_filters" type="scan_to_scan_filter_chain" output="screen" name="laser_filter">
+      <rosparam command="load" file="$(find ist_tools)/conf/box_filter.yaml" />
+  </node>
+-->
+
+</launch>

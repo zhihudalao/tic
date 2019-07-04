@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: amcl
+Description: Description of amcl
+Version: 1.14.2
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lamcl_sensors -lamcl_map -lamcl_pf
+Requires: rosbag roscpp dynamic_reconfigure tf nav_msgs std_srvs

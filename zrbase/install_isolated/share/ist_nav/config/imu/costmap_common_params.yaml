@@ -1,0 +1,48 @@
+#footprint: [[0.40, -0.33], [0.40, 0.33],[-0.40, 0.33], [-0.40, -0.33]]
+#footprint: [[0.60, -0.33], [0.60, 0.33],[-0.2, 0.33], [-0.2, -0.33]] 
+#footprint: [[-0.24, -0.345], [-0.24, 0.345], [0.65, 0.345], [0.65, -0.345]]
+#footprint: [[0.65, -0.345], [0.65, 0.345], [-0.24, 0.345], [-0.24, -0.345]]
+#footprint: [[-0.37, -0.445], [-0.37, 0.445], [0.75, 0.445], [0.75, -0.445]]
+#footprint: [[-0.1, -0.26], [-0.1, 0.26],[0.287, 0.26], [0.287, -0.26]]
+footprint: [[0.72,0.35],[0.72,-0.35],[-0.2,-0.35],[-0.2,0.35]]
+
+obstacle_layer:
+  enabled: true
+  max_obstacle_height: 0.6
+  min_obstacle_height: 0.0
+  obstacle_range: 3.0
+  raytrace_range: 5.0
+  inflation_radius: 0.75
+  combination_method: 1
+  observation_sources: laser_scan_sensor  
+  track_unknown_space: true
+ 
+  origin_z: 0.0
+  z_resolution: 0.1
+  z_voxels: 10
+  unknown_threshold: 15
+  mark_threshold: 0
+  publish_voxel_map: true
+  footprint_clearing_enabled: true
+
+
+  laser_scan_sensor:
+    data_type: LaserScan
+    topic: /scan_filtered
+    marking: true
+    clearing: true
+    expected_update_rate: 1.5
+    min_obstacle_height: 0.12
+    max_obstacle_height: 0.25
+
+
+inflation_layer:
+  enabled:              true
+#  cost_scaling_factor:  10.0 # exponential rate at which the obstacle cost drops off (default: 10)
+  cost_scaling_factor:  3.0
+  inflation_radius:     0.75 # max. distance from an obstacle at which costs are incurred for planning paths.
+
+static_layer:
+  enabled:              true
+  map_topic:            "/map"
+

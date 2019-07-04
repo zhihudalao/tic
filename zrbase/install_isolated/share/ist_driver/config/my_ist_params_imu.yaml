@@ -1,0 +1,75 @@
+#port: /dev/arduino
+debug: false
+centerDistance: 500
+logFile: /root/log/motorlist_log.txt
+statusSendTime: 0.3
+
+port: /dev/ttyChassis
+baud: 115200
+timeout: 0.4
+rate: 50
+sensorstate_rate: 20
+
+useImu: True
+useSonar: False
+use_base_controller: True
+base_controller_rate: 20
+
+sonar_height: 0.15
+
+sonar0_offset_yaw: 0.0
+sonar0_offset_x: 0.23
+sonar0_offset_y: 0.07
+
+sonar1_offset_yaw: 0.0
+sonar1_offset_x: 0.23
+sonar1_offset_y: -0.07
+
+sonar2_offset_yaw: 0.785
+sonar2_offset_x: 0.23
+sonar2_offset_y: 0.15
+
+sonar3_offset_yaw: -0.785
+sonar3_offset_x: 0.23
+sonar3_offset_y: -0.15
+
+sonar4_offset_yaw: 3.14
+sonar4_offset_x: -0.07
+sonar4_offset_y: 0.0
+
+# For a robot that uses base_footprint, change base_frame to base_footprint
+base_frame: base_footprint
+
+# === Robot drivetrain parameters
+wheel_diameter: 0.176 #new_lun
+wheel_track: 0.5220 #0.5325 new_lun
+encoder_resolution: 4000
+gear_reduction: 50 #0.975
+upGearReduction: 50
+downGearReduction: 50
+motors_reversed: False
+
+# === PID parameters
+Kp: 50
+Kd: 20
+Ki: 0
+Ko: 50
+accel_limit: 0.2
+
+debugSonarTest: False 
+debugMotorSetSpeed: False
+motorLevelParamEnable: False
+odomTfSendFlag: True
+
+brushLevelLow: 10
+brushLevelMedium: 20
+brushLevelHigh: 30
+
+waterSprayLow: 10
+waterSprayMedium: 20
+waterSprayHigh: 30
+
+ultrasoundFieldView: 30
+ultrasoundMinRange: 0.1
+ultrasoundMaxRange: 5
+

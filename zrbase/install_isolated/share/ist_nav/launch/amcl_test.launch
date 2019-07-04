@@ -1,0 +1,14 @@
+<launch>
+  <!--arg name="map_file"/-->
+  <!--arg name="map_file" default="/root/tic_map/map2/map2.yaml"/-->         <!--map arddr /-->
+  <!--node name="map_server" pkg="map_server" type="map_server" args="/root/tic_map/$(arg map_file)/map2.yaml"/-->
+  <!--node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /-->
+  <arg name="initial_pose_x" default="0.0"/> 
+  <arg name="initial_pose_y" default="0.0"/> 
+  <arg name="initial_pose_a" default="0.0"/>
+  <include file="$(find ist_nav)/launch/include/imu/amcl.launch.xml">
+    <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+    <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+    <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+  </include>
+</launch>

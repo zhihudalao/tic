@@ -1,0 +1,5 @@
+
+
+---
+ist_slam_ros_msgs/StatusResponse status
+ist_slam_ros_msgs/TrajectoryStates trajectory_states

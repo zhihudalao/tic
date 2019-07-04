@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: yocs_navigator
+Version: 0.12.1
+Summary: Navigation module for robots
+Home-page: http://wiki.ros.org/yocs_navigator
+Author: Jihoon Lee
+Author-email: jihoonl@yujinrobot.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: rospy

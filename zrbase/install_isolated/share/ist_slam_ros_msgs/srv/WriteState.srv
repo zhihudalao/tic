@@ -1,0 +1,5 @@
+
+string filename
+bool include_unfinished_submaps
+---
+ist_slam_ros_msgs/StatusResponse status

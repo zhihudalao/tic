@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: license_manager
+Description: Description of license_manager
+Version: 0.0.0
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include -I/usr/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lcheck_license -llicense++_static /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so /usr/lib/x86_64-linux-gnu/libboost_program_options.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+Requires: 

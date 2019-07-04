@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: map_server
+Description: Description of map_server
+Version: 1.14.2
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lmap_server_image_loader
+Requires: roscpp nav_msgs tf2

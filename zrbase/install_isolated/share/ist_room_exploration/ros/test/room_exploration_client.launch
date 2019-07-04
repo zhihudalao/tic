@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="env_pack" default="$(find ist_test_env_config)" />
+	<!-- <arg name="robot_env" default="hax"/> -->
+	<!-- <arg name="robot_env" default="ist-apartment"/> -->
+	<!-- <arg name="robot_env" default="ist_houting_floor3"/> -->
+	<arg name="robot_env" default="20190409_223714"/>
+	<arg name="robot_radius" default="0.75"/>
+	<arg name="coverage_radius" default="0.75"/>
+	<arg name="use_test_maps" default="false"/>
+	<arg name="execute_path" default="false"/>
+	<arg name="path_image_filename_postfix" default=""/>
+	<arg name="save_result_to_image" default="true"/>
+	<!-- 1: with x direction of the picture, 2: with y direction of the picture -->
+	<arg name="room_order" default="2" />
+	<!-- Only when setting use test maps to false, the use_img_absolute_path does work. 
+		 After setting use_img_absolute_path to true, you must set the img_path.  -->
+	<arg name="use_img_absolute_path" default="false"/>
+	<arg name="img_path" default="/home/ismart/Pictures/tmp/map/lab_d_scan_1.png"/>
+	<!-- save file name: path_point.txt, in home folder -->
+	<arg name="save_path_to_file" default="true" />
+	<arg name="scale_ratio" default="0.88" />
+
+	<!--  -->
+	<node ns="room_exploration" pkg="ist_room_exploration" type="room_exploration_client" name="room_exploration_client" output="screen">
+		<rosparam file="$(arg env_pack)/envs/$(arg robot_env)/ist_map.yaml" command="load" />
+		<param name="env_pack" value="$(arg env_pack)"/>
+		<param name="robot_env" value="$(arg robot_env)"/>
+		<param name="robot_radius" value="$(arg robot_radius)"/>
+		<param name="coverage_radius" value="$(arg coverage_radius)"/>
+		<param name="use_test_maps" value="$(arg use_test_maps)"/>
+		<param name="execute_path" value="$(arg execute_path)" />
+		<param name="path_image_filename_postfix" value="$(arg path_image_filename_postfix)" />
+		<param name="save_result_to_image" value="$(arg save_result_to_image)"/>
+		<param name="room_order" value="$(arg room_order)"/>
+		<param name="scale_ratio" value="$(arg scale_ratio)"/>
+		<param name="use_img_absolute_path" value="$(arg use_img_absolute_path)"/>
+		<param name="img_path" value="$(arg img_path)"/>
+		<param name="save_path_to_file" value="$(arg save_path_to_file)"/>
+	</node>
+
+
+</launch>

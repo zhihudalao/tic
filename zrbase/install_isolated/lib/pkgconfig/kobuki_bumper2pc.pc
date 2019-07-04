@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: kobuki_bumper2pc
+Description: Description of kobuki_bumper2pc
+Version: 0.6.8
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lkobuki_bumper2pc_nodelet
+Requires: roscpp nodelet pluginlib sensor_msgs kobuki_msgs

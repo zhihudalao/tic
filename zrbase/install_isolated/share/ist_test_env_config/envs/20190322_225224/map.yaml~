@@ -1,0 +1,6 @@
+image: map_meitu_1.png
+resolution: 0.050000
+origin: [-3.361349, -10.694897, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

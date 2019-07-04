@@ -1,0 +1,36 @@
+
+
+<launch>
+  <arg name="bag_filenames"/>
+  <arg name="no_rviz"/>
+  <arg name="rviz_config"/>
+  <arg name="configuration_directory"/>
+  <arg name="configuration_basenames"/>
+  <arg name="urdf_filenames"/>
+  <arg name="launch_prefix"/>
+
+  <param name="/use_sim_time" value="true" />
+
+  <group unless="$(arg no_rviz)">
+    <node name="rviz"
+          pkg="rviz"
+          type="rviz"
+          required="true"
+          args="-d $(arg rviz_config)" />
+
+    <node name="ist_slam_occupancy_grid_node"
+        pkg="ist_slam_ros"
+        type="ist_slam_occupancy_grid_node"
+        args="-resolution 0.05" />
+  </group>
+
+  <node name="ist_slam_offline_node" pkg="ist_slam_ros"
+      required="$(arg no_rviz)"
+      type="ist_slam_offline_node" args="
+          -configuration_directory $(arg configuration_directory)
+          -configuration_basenames $(arg configuration_basenames)
+          -urdf_filenames $(arg urdf_filenames)
+          -bag_filenames $(arg bag_filenames)"
+      launch-prefix="$(arg launch_prefix)"
+      output="screen"/>
+</launch>

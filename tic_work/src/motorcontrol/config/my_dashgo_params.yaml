@@ -1,0 +1,65 @@
+#port: /dev/dashgo
+#port: /dev/port1
+port: /dev/ttyStm32
+baud: 115200
+timeout: 0.4
+rate: 20
+sensorstate_rate: 50
+
+useImu: True
+useSonar: False
+use_base_controller: True
+base_controller_rate: 10
+
+sonar_height: 0.15
+
+sonar0_offset_yaw: 0.0
+sonar0_offset_x: 0.23
+sonar0_offset_y: 0.07
+
+sonar1_offset_yaw: 0.0
+sonar1_offset_x: 0.23
+sonar1_offset_y: -0.07
+
+sonar2_offset_yaw: 0.785
+sonar2_offset_x: 0.23
+sonar2_offset_y: 0.15
+
+sonar3_offset_yaw: -0.785
+sonar3_offset_x: 0.23
+sonar3_offset_y: -0.15
+
+sonar4_offset_yaw: 3.14
+sonar4_offset_x: -0.07
+sonar4_offset_y: 0.0
+
+# For a robot that uses base_footprint, change base_frame to base_footprint
+#base_frame: base_footprint
+
+# === Robot drivetrain parameters
+wheel_diameter: 0.168
+wheel_track: 0.5220
+encoder_resolution: 4000
+gear_reduction: 50 #0.975
+motors_reversed: False
+
+base_frame: base_footprint
+debugMotorSetSpeed: False
+brushLevelLow: 10
+brushLevelMedium: 20
+brushLevelHigh: 30
+waterSprayLow: 10
+waterSprayMedium: 20
+waterSprayHigh: 30
+motorLevelParamEnable: False
+debugSonarTest: False
+ultrasoundFieldView: 30
+ultrasoundMinRange: 0.1
+ultrasoundMaxRange: 5
+
+# === PID parameters
+Kp: 50
+Kd: 20
+Ki: 0
+Ko: 50
+accel_limit: 1.0

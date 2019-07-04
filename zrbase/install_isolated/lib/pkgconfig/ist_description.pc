@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: ist_description
+Description: Description of ist_description
+Version: 2.1.0
+Cflags: 
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib 
+Requires: 

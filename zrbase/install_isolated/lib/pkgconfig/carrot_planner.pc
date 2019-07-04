@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: carrot_planner
+Description: Description of carrot_planner
+Version: 1.14.2
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lcarrot_planner
+Requires: roscpp pluginlib costmap_2d base_local_planner nav_core

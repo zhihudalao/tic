@@ -1,0 +1,2 @@
+string ir_data
+bool ir_charging

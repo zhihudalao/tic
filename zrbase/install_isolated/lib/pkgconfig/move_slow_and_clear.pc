@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/zrbase/install_isolated
+
+Name: move_slow_and_clear
+Description: Description of move_slow_and_clear
+Version: 1.14.2
+Cflags: -I/home/ubuntu/zrbase/install_isolated/include
+Libs: -L/home/ubuntu/zrbase/install_isolated/lib -lmove_slow_and_clear
+Requires: geometry_msgs nav_core pluginlib roscpp

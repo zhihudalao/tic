@@ -1,0 +1,5 @@
+
+---
+ist_slam_ros_msgs/StatusResponse status
+ist_slam_ros_msgs/MetricFamily[] metric_families
+time timestamp
